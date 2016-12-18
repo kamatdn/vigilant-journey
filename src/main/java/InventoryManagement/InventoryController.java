@@ -20,10 +20,10 @@ public class InventoryController {
 	@RequestMapping(value="/inventory-info",method=RequestMethod.POST)
     public InventoryInfo setInventoryInfo(@RequestParam(value="deviceid") String deviceid,
 	                                      @RequestParam(value="wt") String wt ) {
-        SFConnector sf_connector = new SFConnector("archana.kamath@portal.dev",
-		                                           "sfdcdev40LKegy7lFSKAoHrgjRCrStNtk",
-												   "3MVG9uudbyLbNPZPSqKWfjG_ruGq5D7og3Mq5l_4BOrXV8LmKYBAuIW5vGZyIi3DXVGj2TzpdJAlzBkP5.beC",
-												   "2556514000160636388");
+        SFConnector sf_connector = new SFConnector("TBD",
+		                                           "TBD",
+												   "TBD",
+												   "TBD");
         sf_connector.login(); 	
 		sf_connector.updateInventory(deviceid, wt);
 		
