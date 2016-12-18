@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.2.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+
+
+jar {
+    baseName = 'IoT-rest-service'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+	compile("org.apache.httpcomponents:httpcore:4.3.2")
+    compile("org.apache.httpcomponents:httpclient:4.3.3")
+    compile("commons-codec:commons-codec:1.7")
+	compile("org.json:json:20141113")
+    testCompile('org.springframework.boot:spring-boot-starter-test')
+}
