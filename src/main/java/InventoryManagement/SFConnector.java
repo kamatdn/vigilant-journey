@@ -25,9 +25,9 @@ import org.json.JSONArray;
 
 public class SFConnector {
 	
-  static final String LOGINURL   = "TBD";
-  static final String GRANTSERVICE = "TBD";
-  static final String REST_ENDPOINT = "TBD";
+  static final String LOGINURL   = "https://login.salesforce.com";
+  static final String GRANTSERVICE = "/services/oauth2/token?grant_type=password";
+  static final String REST_ENDPOINT = "/services/apexrest/Inventory";
 
   private static Header prettyPrintHeader = new BasicHeader("X-PrettyPrint", "1");
   private String username;
